@@ -12,54 +12,45 @@
 </head>
 
 <body>
-
-    <header>
-        <div class="logo">
-            <img class="logoimg" src="imagenes/Logo.png" alt="logo alura"></h1>
-            <h1 class="tittle">Encriptador de mensajes</h1>
-        </div>
-    </header>
-
     <main>
+        <header>
+            <div class="logo_titulo">
+                <img src="imagenes/Logo.png" alt="logo alura"></h1>
+                <h1>Encriptador de mensajes</h1>
+            </div>
+        </header>
+
         <section>
             <div class="left">
-                <textarea class="text-input" name="text" id="inputTexto" cols="60" rows="20" required autofocus
+                <textarea class="text-input" name="text" id="inputTexto" cols="50" rows="15" required autofocus
                     placeholder="Ingrese el texto aqui" autocomplete="on"></textarea>
             </div>
 
-            <p class="requisitos">Solo con letras minúsculas, no deben ser utilizados letras con acentos ni caracteres
-                especiales...</p>
-
-
-            <p class="copyrght">&copy; Alura Challenge Desafio 1 // Jairo A Cardenas M - Enero 2023 </p>
-
-        </section>
-
-        <section>
             <div class="right">
                 <img id="img-right" src="imagenes/Muñeco.png" alt="Muñeco de alura">
-
                 <h2 id="texto1">Ningun mensaje fue encontrado</h2>
-
-                <textarea id="texto2" name="name" cols="30"
-                    rows="10">Ingresa el texto que deseas encriptar y desencriptar</textarea>
+                <textarea id="texto2" name="name" cols="50"
+                    rows="15">Ingresa el texto que deseas encriptar y desencriptar</textarea>
                 <button id="copiar" type="button" name="name" onclick="copiar()">¡ Copiar !</button>
             </div>
         </section>
+
+        <footer>
+            <div class="left_buttom1">
+                <button type="button" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
+                <button type="button" id="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+
+            <div class="left_buttom2">
+                <p>Solo con letras minúsculas, no deben ser utilizados letras con acentos ni
+                    caracteres
+                    especiales...</p>
+                <br>
+                <p>&copy; Alura Challenge Desafio 1 // Jairo A Cardenas M - Enero 2023 </p>
+                <br>
+            </div>
+        </footer>
     </main>
-
-    <footer>
-        <div class="left-buttom">
-
-            <button type="button" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
-
-            <button type="button" id="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
-        </div>
-
-
-    </footer>
-
-
 </body>
 
 </html>
