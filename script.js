@@ -57,3 +57,9 @@ function copiar(){
     alert("¡Se a copiado el texto!...");
 
 }
+
+
+// function history(){
+//     history.go(-1);
+// }
+

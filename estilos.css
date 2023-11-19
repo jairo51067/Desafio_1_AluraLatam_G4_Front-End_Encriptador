@@ -4,27 +4,18 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0.1%;
-    padding: 0.1%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
-    align-items: stretch;
 
-}
 
 header,
 main,
 footer {
-    background: #dfe0e4;
-    /* background-color: #ffffff; */
+    /* background: #dfe0e4; */
+    background-color: #ffffff;
 }
 
 .logo_titulo {
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
     display: flex;
     align-items: center;
 
@@ -36,8 +27,40 @@ footer {
 }
 
 .logo_titulo h1 {
-
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.text_footer-inicio {
+    margin: auto;
+    display: table;
+    background-color: #fff;
+}
+
+h1 {
+    float: left;
+    color: #000;
+    position: relative;
+}
+
+h1 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background-color: #fff;
+    border-left: 1px solid #000;
+
+    animation: maquina 10s infinite alternate steps(138);
+}
+
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
 }
 
 section {
@@ -45,22 +68,19 @@ section {
     justify-content: space-around;
 }
 
-.left {
-    display: flex;
-}
 
 .text-input {
-    float: left;
     color: #0A3871;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
     outline: none;
+    text-align: justify;
 }
 
 
 .right {
-    width: 450px;
-    height: 450px;
+    width: 28.125rem;
+    height: 28.125rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -70,14 +90,16 @@ section {
 }
 
 #img-right {
-    width: 200px;
-    height: 200px;
-    margin-top: 5%;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0rem 0rem 3rem 0rem;
 }
 
 #texto1 {
+    margin: 0 auto;
+    padding: 2rem 0rem 2rem 0rem;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     text-align: center;
     color: #343A40;
@@ -85,10 +107,9 @@ section {
 
 
 #texto2 {
-    margin-top: 10px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Inter';
-    text-align: center;
+    text-align: justify;
     flex-grow: 0;
     order: 1;
     color: #495057;
@@ -107,13 +128,13 @@ section {
 
     font-family: 'Inter';
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: #0A3871;
     background: #D8DFE8;
     border: none;
     border-radius: 24px;
-    display: none; 
+    display: none;
     transition: 1s all;
 
 }
@@ -125,23 +146,26 @@ section {
 
 }
 
-.left_buttom1 {
-    margin-top: 3%;
+.buttom_footer {
+    margin-top: 1.5%;
     display: flex;
     justify-content: center;
 }
 
-.left_buttom2 {
+
+.text_footer-final {
     text-align: center;
     margin: 10px auto;
     padding: 7px;
 }
 
-#btn-encriptar, #btn-desencriptar {
+#btn-encriptar,
+#btn-desencriptar,
+#btn-restablecer {
     width: 23%;
     margin: 0 auto;
     padding: 1rem;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     color: #ffffff;
     background: #0a3871;
@@ -151,7 +175,9 @@ section {
     cursor: pointer;
 }
 
-#btn-encriptar:hover, #btn-desencriptar:hover {
+#btn-encriptar:hover,
+#btn-desencriptar:hover,
+#btn-restablecer:hover {
     background: #495057;
     transform: scale(1.1);
     color: #ffffff;
@@ -159,14 +185,43 @@ section {
 
 
 @media screen and (max-width:768px) {
+
+    .text_footer-inicio {
+        margin-top: 7%;
+    }
+
     section {
         margin-top: 3%;
         display: flex;
         flex-direction: column;
         align-content: space-around;
         align-items: center;
-        gap: 35px;
+        gap: 5px;
     }
 }
 
-@media screen and (max-width:390px) {}
+@media screen and (max-width:390px) {
+
+    span {
+        display: none;
+    }
+
+    .text_footer-inicio {
+        margin-top: 7%;
+        text-align: center;
+    }
+
+    .left,
+    .right,
+    #texto2 {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+
+    #btn-encriptar,
+    #btn-desencriptar,
+    #btn-restablecer {
+        font-size: 0.65rem;
+    }
+}
