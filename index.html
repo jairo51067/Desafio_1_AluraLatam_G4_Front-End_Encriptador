@@ -5,57 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Archivos de estilos -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilos.css">
+    <!--  Archivos de js -->
     <script src="script.js"></script>
-    <title>Challenge ONE</title>
+    <!-- biblioteca de alertas alertify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <title>Encriptador Challenge ONE</title>
+
 </head>
 
 <body>
     <main>
         <header>
             <div class="logo_titulo">
-                <img src="imagenes/Logo.png" alt="logo alura"></h1>
+                <img src="img/logoaluralatam2.png" style="border-radius: 10px;" alt="Logo AluraLatam"></h1>
                 <h1>Encriptador de mensajes</h1>
-            </div>
-
-            <div class="text_footer-inicio">
-                <h1>Solo con letras minúsculas, no deben ser utilizados letras con acentos ni
-                    caracteres especiales...<span>&#160;</span></h1>
             </div>
         </header>
 
-        <section>
+        <main class="contenido-principal">
             <div class="left">
-                <textarea class="text-input" name="text" id="inputTexto" cols="50" rows="15" required autofocus
-                    placeholder="Ingrese el texto aqui" autocomplete="on"></textarea>
+                <div>
+                    <textarea id="inputTexto" cols="33" rows="15" required autofocus
+                        placeholder="Ingrese aquí su mensaje" autocomplete="on"></textarea>
+                </div>
             </div>
 
             <div class="right">
-                <img id="img-right" src="imagenes/Muñeco.png" alt="Muñeco de alura">
-                <h2 id="texto1">Ningun mensaje encontrado, ingrese su mensaje a encriptar o desencriptar.</h2>
-                <textarea id="texto2" name="name" cols="50" rows="15"></textarea>
-                <button id="copiar" type="button" name="name" onclick="copiar()">¡ Copiar !</button>
+                <div>
+                    <h2 class="text-mensaje" id="texto1">Ningún mensaje encontrado, ingrese su mensaje a encriptar o
+                        desencriptar.</h2>
+                </div>
+
+                <div>
+                    <img id="img-right" src="img/Muñeco.png" alt="Muñeco AluraLatam">
+                </div>
+
+                <div class="hidden">
+                    <textarea id="texto2" name="name" cols="33" rows="15"></textarea>
+                </div>
             </div>
-        </section>
+        </main>
 
         <footer>
-            <div class="buttom_footer">
-                <button type="button" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
-                <button type="button" id="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
-                <button type="button" id="btn-restablecer" onclick="history.go(0)">Restablecer</button>
+            <div class="contenedor-botones">
+                <button class="btn-2" type="button" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="btn-2" type="button" id="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+                <button class="btn-2 hidden1" type="button" id="copiar" onclick="copiar()">¡ Copiar !</button>
+                <button class="btn-2" type="button" id="btn-restablecer" onclick="history.go(0)">Limpiar</button>
             </div>
 
-            <div class="text_footer-final">
-                <p>Solo con letras minúsculas, no deben ser utilizados letras con acentos ni
+            <div class="contenedor-mensajes">
+                <p class="text-mensaje">Solo con letras minúsculas, no deben ser utilizados letras con acentos ni
                     caracteres
-                    especiales...</p>
+                    especiales.</p>
                 <br>
-                <p>&copy; Alura Challenge Desafio 1 // Jairo A Cardenas M - Enero 2023 </p>
+                <p class="text-mensaje">&copy; Alura Challenge Desafió 1 // Jairo A Cárdenas M - Enero 2023_V1</p>
                 <br>
+                <p class="text-mensaje">- Junio 2024_V2 - </p>
             </div>
         </footer>
     </main>
+
+    <!-- biblioteca de alertas Swal.fire -->
+    <!-- <script src="sweetalert2.all.min.js"></script>  -->
 </body>
 
 </html>
