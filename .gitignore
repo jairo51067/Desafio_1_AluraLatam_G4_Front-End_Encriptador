@@ -1,0 +1,54 @@
+# Archivos de configuración local
+config.local
+.env
+settings.json
+
+# Dependencias de Node.js
+node_modules/
+
+# Carpetas de distribución y compilación
+dist/
+build/
+out/
+
+# Archivos temporales
+*.tmp
+*.log
+*.swp
+
+# Archivos generados por editores
+.vscode/
+.idea/
+
+# Caché
+cache/
+
+# Certificados y claves privadas
+*.pem
+*.key
+*.crt
+
+# Archivos de resultados de pruebas
+*.result
+*.coverage
+
+# Archivos de sistema
+Thumbs.db
+.DS_Store
+
+# Documentos generados automáticamente
+*.docx
+*.pdf
+*.pptx
+
+# Configuración de Webpack
+webpack.config.js
+webpack.config.prod.js
+
+# Archivos generados por Babel
+*.babelrc
+
+# Archivos de configuración de otros frameworks
+/public/
+
+# Documentos y otros archivos generados automáticamente

@@ -1,21 +1,24 @@
-* {
+*,
+*::after,
+*::before {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     font-size: 20px;
 }
 
 @media (max-width: 768px) {
-    html {
+    html, body {
         font-size: 18px;
     }
 }
 
 @media (max-width: 320px) {
-    html {
+    html, body {
         font-size: 16px;
     }
 }
@@ -86,7 +89,7 @@ textarea {
     flex-direction: column;
 }
 
-.right>:first-child{
+.right>:first-child {
     margin-bottom: 7%;
 }
 
@@ -114,6 +117,6 @@ textarea {
     cursor: pointer;
 }
 
-.contenedor-mensajes{
+.contenedor-mensajes {
     margin-top: 2%;
 }
